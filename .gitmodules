@@ -37,3 +37,6 @@
 [submodule "home/.vim/bundle_storage/vim-unimpaired"]
 	path = home/.vim/bundle_storage/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "home/.vim/bundle_storage/vim-space"]
+	path = home/.vim/bundle_storage/vim-space
+	url = https://github.com/spiiph/vim-space.git
