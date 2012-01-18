@@ -4,3 +4,18 @@
 [submodule "home/.vim/bundle_storage/vim-ruby"]
 	path = home/.vim/bundle_storage/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "home/.vim/bundle_storage/vim-cucumber"]
+	path = home/.vim/bundle_storage/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber
+[submodule "home/.vim/bundle_storage/vim-coffee-script"]
+	path = home/.vim/bundle_storage/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+[submodule "home/.vim/bundle_storage/vim-git"]
+	path = home/.vim/bundle_storage/vim-git
+	url = https://github.com/tpope/vim-git
+[submodule "home/.vim/bundle_storage/vim-haml"]
+	path = home/.vim/bundle_storage/vim-haml
+	url = https://github.com/tpope/vim-haml
+[submodule "home/.vim/bundle_storage/vim-javascript"]
+	path = home/.vim/bundle_storage/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
