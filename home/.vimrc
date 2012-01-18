@@ -4,6 +4,8 @@ set nocompatible
 " Ask Pathogen to load bundles
 call pathogen#infect()
 
+let mapleader=","
+
 " Use higher contrast zenburn scheme
 let g:zenburn_high_Contrast=1
 colorscheme zenburn
