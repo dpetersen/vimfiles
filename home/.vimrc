@@ -1,11 +1,8 @@
 " Disable vi compatibility
 set nocompatible
 
-" Load everything in .vim/bundle via pathogen.vim
-" call pathogen#runtime_append_all_bundles()
-
-" Set up documenation for all the bundles
-" call pathogen#helptags()
+" Ask Pathogen to load bundles
+call pathogen#infect()
 
 " Use higher contrast zenburn scheme
 let g:zenburn_high_Contrast=1
