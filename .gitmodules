@@ -19,3 +19,6 @@
 [submodule "home/.vim/bundle_storage/vim-javascript"]
 	path = home/.vim/bundle_storage/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "home/.vim/bundle_storage/vim-rails"]
+	path = home/.vim/bundle_storage/vim-rails
+	url = https://github.com/tpope/vim-rails
