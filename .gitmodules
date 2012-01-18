@@ -22,3 +22,9 @@
 [submodule "home/.vim/bundle_storage/vim-rails"]
 	path = home/.vim/bundle_storage/vim-rails
 	url = https://github.com/tpope/vim-rails
+[submodule "home/.vim/bundle_storage/nerdtree"]
+	path = home/.vim/bundle_storage/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "home/.vim/bundle_storage/nerdcommenter"]
+	path = home/.vim/bundle_storage/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
