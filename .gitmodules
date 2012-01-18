@@ -46,3 +46,6 @@
 [submodule "home/.vim/bundle_storage/camelcasemotion"]
 	path = home/.vim/bundle_storage/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "home/.vim/bundle_storage/vim-endwise"]
+	path = home/.vim/bundle_storage/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
