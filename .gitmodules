@@ -31,3 +31,9 @@
 [submodule "home/.vim/bundle_storage/vim-statline"]
 	path = home/.vim/bundle_storage/vim-statline
 	url = https://github.com/scrooloose/vim-statline
+[submodule "home/.vim/bundle_storage/vim-surround"]
+	path = home/.vim/bundle_storage/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "home/.vim/bundle_storage/vim-unimpaired"]
+	path = home/.vim/bundle_storage/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
