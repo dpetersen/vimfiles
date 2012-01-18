@@ -1,3 +1,6 @@
 [submodule "home/.vim/bundle_storage/vim-fugitive"]
 	path = home/.vim/bundle_storage/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "home/.vim/bundle_storage/vim-ruby"]
+	path = home/.vim/bundle_storage/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
