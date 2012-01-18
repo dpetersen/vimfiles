@@ -113,6 +113,16 @@ set smartcase
 
 " }}}
 
+" Ruby specific options {{{
+
+" This will highlight trailing whitespace and tabs preceded by a space character
+let ruby_space_errors = 1
+
+" Syntax highlight ruby operators (+, -, etc)
+let ruby_operators = 1
+
+" }}}
+
 " GUI related options"{{{
 
 " Don't show me a toolbar in a GUI Version of Vim
