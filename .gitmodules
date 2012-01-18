@@ -40,3 +40,6 @@
 [submodule "home/.vim/bundle_storage/vim-space"]
 	path = home/.vim/bundle_storage/vim-space
 	url = https://github.com/spiiph/vim-space.git
+[submodule "home/.vim/bundle_storage/ack.vim"]
+	path = home/.vim/bundle_storage/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
