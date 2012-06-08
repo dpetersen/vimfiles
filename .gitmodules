@@ -58,3 +58,6 @@
 [submodule "home/.vim/bundle_storage/vim-indent-object"]
 	path = home/.vim/bundle_storage/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule "home/.vim/bundle_storage/vim-indent-guides"]
+	path = home/.vim/bundle_storage/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git

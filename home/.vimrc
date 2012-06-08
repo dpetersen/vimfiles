@@ -53,6 +53,14 @@ set wmh=0
 " A split will default to being creating under or to the right of the current.
 set splitbelow splitright
 
+" Indent plugin settings for Zenburn
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * hi IndentGuidesOdd ctermbg=236
+autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jj or jk or to be the same as Esc to leave Insert mode.
