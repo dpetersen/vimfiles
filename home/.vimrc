@@ -61,6 +61,9 @@ let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * hi IndentGuidesOdd ctermbg=236
 autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
 
+" Fix for UTF-8 annoyances in vagrant ubuntu
+let g:NERDTreeDirArrows=0
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jj or jk or to be the same as Esc to leave Insert mode.
