@@ -64,3 +64,6 @@
 [submodule "home/.vim/bundle_storage/vim-handlebars"]
 	path = home/.vim/bundle_storage/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "home/.vim/bundle_storage/vim-bundler"]
+	path = home/.vim/bundle_storage/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
