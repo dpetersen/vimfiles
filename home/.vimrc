@@ -1,6 +1,10 @@
 " Disable vi compatibility
 set nocompatible
 
+" Used for some plugins to display fancy symbols.  Hopefully doesn't blow
+" things up.
+set encoding=utf-8
+
 " Ask Pathogen to load bundles
 call pathogen#infect()
 
@@ -63,6 +67,9 @@ autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
 
 " Fix for UTF-8 annoyances in vagrant ubuntu
 let g:NERDTreeDirArrows=0
+
+" Have powerline use slightly prettier characters.
+let g:Powerline_symbols = 'unicode'
 
 " My custom normal/insert mode mappings {{{
 

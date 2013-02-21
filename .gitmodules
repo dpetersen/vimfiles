@@ -28,9 +28,6 @@
 [submodule "home/.vim/bundle_storage/nerdcommenter"]
 	path = home/.vim/bundle_storage/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
-[submodule "home/.vim/bundle_storage/vim-statline"]
-	path = home/.vim/bundle_storage/vim-statline
-	url = https://github.com/scrooloose/vim-statline
 [submodule "home/.vim/bundle_storage/vim-surround"]
 	path = home/.vim/bundle_storage/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -67,3 +64,6 @@
 [submodule "home/.vim/bundle_storage/vim-bundler"]
 	path = home/.vim/bundle_storage/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "home/.vim/bundle_storage/vim-powerline"]
+	path = home/.vim/bundle_storage/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
