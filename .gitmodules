@@ -67,3 +67,6 @@
 [submodule "home/.vim/bundle_storage/vim-powerline"]
 	path = home/.vim/bundle_storage/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "home/.vim/bundle_storage/syntastic"]
+	path = home/.vim/bundle_storage/syntastic
+	url = https://github.com/scrooloose/syntastic.git
