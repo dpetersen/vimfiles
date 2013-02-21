@@ -71,6 +71,9 @@ let g:NERDTreeDirArrows=0
 " Have powerline use slightly prettier characters.
 let g:Powerline_symbols = 'unicode'
 
+" Show a statusline always.
+set laststatus=2
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jj or jk or to be the same as Esc to leave Insert mode.
