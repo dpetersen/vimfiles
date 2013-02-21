@@ -46,9 +46,6 @@
 [submodule "home/.vim/bundle_storage/vim-endwise"]
 	path = home/.vim/bundle_storage/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
-[submodule "home/.vim/bundle_storage/LustyJuggler"]
-	path = home/.vim/bundle_storage/LustyJuggler
-	url = https://github.com/vim-scripts/LustyJuggler.git
 [submodule "home/.vim/bundle_storage/argtextobj.vim"]
 	path = home/.vim/bundle_storage/argtextobj.vim
 	url = https://github.com/vim-scripts/argtextobj.vim.git
