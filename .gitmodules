@@ -73,3 +73,9 @@
 [submodule "home/.vim/bundle_storage/matchit"]
 	path = home/.vim/bundle_storage/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
+[submodule "home/.vim/bundle_storage/vim-abolish"]
+	path = home/.vim/bundle_storage/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git
+[submodule "home/.vim/bundle_storage/vim-repeat"]
+	path = home/.vim/bundle_storage/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
