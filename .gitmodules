@@ -79,3 +79,6 @@
 [submodule "home/.vim/bundle_storage/vim-repeat"]
 	path = home/.vim/bundle_storage/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
+[submodule "home/.vim/bundle_storage/vim-ruby-conque"]
+	path = home/.vim/bundle_storage/vim-ruby-conque
+	url = git://github.com/skwp/vim-ruby-conque.git
