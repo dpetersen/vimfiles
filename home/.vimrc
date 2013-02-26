@@ -9,6 +9,7 @@ set encoding=utf-8
 call pathogen#infect()
 
 let mapleader=","
+let maplocalleader=","
 
 " Use higher contrast zenburn scheme
 let g:zenburn_high_Contrast=1
@@ -35,8 +36,8 @@ set expandtab
 " Highlight the line that the cursor is on.
 set cursorline
 
-" Always show line numbers
-set number
+" Always show relative line numbers
+set relativenumber
 
 " Reset the window title in non-GUI mode to something a little more helpful.
 set title
@@ -74,45 +75,49 @@ let g:Powerline_symbols = 'unicode'
 " Show a statusline always.
 set laststatus=2
 
+" Custom Fugitive shortcuts
+noremap <leader>gs :Gstatus <CR>
+noremap <leader>gc :Gcommit <CR>
+noremap <leader>gd :Gdiff <CR>
+noremap <leader>gb :Gdiff <CR>
+
 " My custom normal/insert mode mappings {{{
 
-" Remap jj or jk or to be the same as Esc to leave Insert mode.
-imap jj <Esc>
-imap jk <Esc>
+" Remap jk or to be the same as Esc to leave Insert mode.
+inoremap jk <Esc>
+inoremap <esc> <nop>
+
+" Quick editing and reloading of .vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " C-j in insert mode escapes normal mode and writes the file.
 " C-S-j in insert mode escapes, saves, and quits.
 " BUG: In iterm, these mappings overwrite each other
-imap <CS-J> <Esc>ZZ
-imap <C-j> <Esc>:w<Enter>
+inoremap <CS-J> <Esc>ZZ
+inoremap <C-j> <Esc>:w<Enter>
 
 " Map ,, and ;; to insert/append a single character
 " Found at VimTips Wiki: http://vim.wikia.com/wiki/Insert_a_single_character
-nmap ;, i_<esc>r
-nmap ;; a_<esc>r
+nnoremap ;, i_<esc>r
+nnoremap ;; a_<esc>r
 
-" ',dp/s/v' brings up an :e/sp/vsp prompt in the context of the current file's directory
-if has("unix")
-  map ,dp :e <C-R>=expand("%:p:h") . "/" <CR>
-  map ,ds :sp <C-R>=expand("%:p:h") . "/" <CR>
-  map ,dv :vsp <C-R>=expand("%:p:h") . "/" <CR>
-else
-  map ,dp :e <C-R>=expand("%:p:h") . "\\" <CR>
-  map ,ds :sp <C-R>=expand("%:p:h") . "\\" <CR>
-  map ,dv :vsp <C-R>=expand("%:p:h") . "\\" <CR>
-endif
+" '<leader>dp/s/v' brings up an :e/sp/vsp prompt in the context of the current file's directory
+noremap <leader>dp :e <C-R>=expand("%:p:h") . "/" <CR>
+noremap <leader>ds :sp <C-R>=expand("%:p:h") . "/" <CR>
+noremap <leader>dv :vsp <C-R>=expand("%:p:h") . "/" <CR>
 
-" ',df' opens up NetRW in the directory of the current file
-map ,df ,dp<CR>
+" '<leader>df' opens up NetRW in the directory of the current file
+noremap <leader>df <leader>dp<CR>
 
-" ',dd' opens up NetRW in Vim's current directory
-map ,dd :e .<CR>
+" '<leader>dd' opens up NetRW in Vim's current directory
+noremap <leader>dd :e .<CR>
 
 " Create directional shortcuts for moving among between splits
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-l> <C-W>l
-nmap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
 
 " }}}
 
