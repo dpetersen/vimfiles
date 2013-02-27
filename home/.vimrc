@@ -63,8 +63,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * hi IndentGuidesOdd ctermbg=236
-autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
+augroup indentguidesaugroup
+  autocmd!
+  autocmd VimEnter,Colorscheme * hi IndentGuidesOdd ctermbg=236
+  autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
+augroup END
 
 " Fix for UTF-8 annoyances in vagrant ubuntu
 let g:NERDTreeDirArrows=0
@@ -146,12 +149,9 @@ let ruby_space_errors = 1
 " Syntax highlight ruby operators (+, -, etc)
 let ruby_operators = 1
 
-augroup myfiletypes
-  " Clear old autocmds in group
+augroup rubyindentstyle
   autocmd!
-
-  " autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+  autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
 augroup END
 
 " }}}
