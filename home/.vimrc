@@ -36,8 +36,8 @@ set expandtab
 " Highlight the line that the cursor is on.
 set cursorline
 
-" Always show relative line numbers
-set relativenumber
+" Always show line numbers
+set number
 
 " Reset the window title in non-GUI mode to something a little more helpful.
 set title
@@ -130,7 +130,7 @@ nnoremap <C-h> <C-W>h
 set hlsearch
 
 " bind \ to clear highlighting, though search term remains and 'n' works
-map <silent> \ :silent nohlsearch<CR>
+noremap <silent> \ :silent nohlsearch<CR>
 
 " Use incremental search
 set incsearch
@@ -155,32 +155,3 @@ augroup rubyindentstyle
 augroup END
 
 " }}}
-
-" GUI related options"{{{
-
-" Don't show me a toolbar in a GUI Version of Vim
-set guioptions-=T
-
-" Don't show scrollbars
-set guioptions-=r
-set guioptions-=L
-set guioptions-=T
-
-" Use console dialogs in GUI Vim, the dialogue boxes are just silly
-if has("gui_gtk")
-        set guioptions+=c
-endif
-
-" Use LiberationMono 12pt.  Only applies to the GUI.
-set gfn=Inconsolata:h14.00
-
-" Nice window title
-if has('title') && (has('gui_running') || &title)
-        set titlestring=
-        set titlestring+=%f\                                             " file name
-        set titlestring+=%h%m%r%w                                        " flags
-        set titlestring+=\ -\ %{v:progname}                              " program name
-        set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')} " working directory
-endif
-
-"}}}
