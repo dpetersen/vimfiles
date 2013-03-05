@@ -82,3 +82,6 @@
 [submodule "home/.vim/bundle_storage/vim-ruby-conque"]
 	path = home/.vim/bundle_storage/vim-ruby-conque
 	url = git://github.com/skwp/vim-ruby-conque.git
+[submodule "home/.vim/bundle_storage/vim-ragtag"]
+	path = home/.vim/bundle_storage/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
