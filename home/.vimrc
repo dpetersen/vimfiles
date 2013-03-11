@@ -93,7 +93,7 @@ augroup END
 
 " Remap jk or to be the same as Esc to leave Insert mode.
 inoremap jk <Esc>
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 " Quick editing and reloading of .vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
