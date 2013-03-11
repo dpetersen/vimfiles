@@ -84,6 +84,11 @@ noremap <leader>gc :Gcommit <CR>
 noremap <leader>gd :Gdiff <CR>
 noremap <leader>gb :Gdiff <CR>
 
+" Use slim highlighting for emblem templates
+augroup emblem_as_slim_augroup
+  autocmd BufNewFile,BufRead *.emblem set filetype=slim
+augroup END
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
