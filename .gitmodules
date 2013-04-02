@@ -88,3 +88,6 @@
 [submodule "home/.vim/bundle_storage/vim-slim"]
 	path = home/.vim/bundle_storage/vim-slim
 	url = git://github.com/slim-template/vim-slim.git
+[submodule "home/.vim/bundle_storage/vim-obsession"]
+	path = home/.vim/bundle_storage/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
