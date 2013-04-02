@@ -82,12 +82,14 @@ set laststatus=2
 noremap <leader>gs :Gstatus <CR>
 noremap <leader>gc :Gcommit <CR>
 noremap <leader>gd :Gdiff <CR>
-noremap <leader>gb :Gdiff <CR>
+noremap <leader>gb :Gblame <CR>
 
 " Use slim highlighting for emblem templates
 augroup emblem_as_slim_augroup
   autocmd BufNewFile,BufRead *.emblem set filetype=slim
 augroup END
+
+noremap Y y$
 
 " My custom normal/insert mode mappings {{{
 
