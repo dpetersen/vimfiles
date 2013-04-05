@@ -91,3 +91,9 @@
 [submodule "home/.vim/bundle_storage/vim-obsession"]
 	path = home/.vim/bundle_storage/vim-obsession
 	url = git://github.com/tpope/vim-obsession.git
+[submodule "home/.vim/bundle_storage/vim-dispatch"]
+	path = home/.vim/bundle_storage/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
+[submodule "home/.vim/bundle_storage/vim-yardoc"]
+	path = home/.vim/bundle_storage/vim-yardoc
+	url = git://github.com/noprompt/vim-yardoc.git

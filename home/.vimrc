@@ -89,7 +89,11 @@ augroup emblem_as_slim_augroup
   autocmd BufNewFile,BufRead *.emblem set filetype=slim
 augroup END
 
+" Make Y behave to EOL like most capitolized normal-mode commands.
 noremap Y y$
+
+" Run your tests (probably) with vim-dispatch
+noremap <leader>t :Dispatch<CR>
 
 " My custom normal/insert mode mappings {{{
 
@@ -159,6 +163,9 @@ let ruby_operators = 1
 augroup rubyindentstyle
   autocmd!
   autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
+
+  autocmd FileType ruby hi link yardGenericTag rubyInstanceVariable
+  autocmd FileType ruby hi link yardGenericDirective rubyInstanceVariable
 augroup END
 
 " }}}
