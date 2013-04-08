@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle_storage/vim-yardoc"]
 	path = home/.vim/bundle_storage/vim-yardoc
 	url = git://github.com/noprompt/vim-yardoc.git
+[submodule "home/.vim/bundle_storage/vim-eunuch"]
+	path = home/.vim/bundle_storage/vim-eunuch
+	url = git://github.com/tpope/vim-eunuch.git
