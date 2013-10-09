@@ -103,3 +103,6 @@
 [submodule "home/.vim/bundle_storage/vim-startify"]
 	path = home/.vim/bundle_storage/vim-startify
 	url = https://github.com/mhinz/vim-startify
+[submodule "home/.vim/bundle_storage/splitjoin.vim"]
+	path = home/.vim/bundle_storage/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
