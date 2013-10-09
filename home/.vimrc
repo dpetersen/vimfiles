@@ -47,7 +47,7 @@ set foldmethod=marker
 
 " Tab completion in command mode shows all possible completions, shell style.
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest:full,full
 
 " Remember global variables across vim sessions
 set viminfo^=!
