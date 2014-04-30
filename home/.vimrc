@@ -169,3 +169,7 @@ augroup rubyindentstyle
 augroup END
 
 " }}}
+
+" Coffee specific options {{{
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+" }}}
