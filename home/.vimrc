@@ -95,6 +95,9 @@ noremap Y y$
 " Run your tests (probably) with vim-dispatch
 noremap <leader>t :Dispatch<CR>
 
+" Store swap files in fixed location, not current directory.
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
@@ -172,4 +175,8 @@ augroup END
 
 " Coffee specific options {{{
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+" }}}
+
+" Javascript specific options {{{
+autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2 expandtab
 " }}}
