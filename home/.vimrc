@@ -173,6 +173,13 @@ augroup END
 
 " }}}
 
+" GoLang options {{{
+augroup golangstyle
+  autocmd!
+  autocmd FileType go set tabstop=2 shiftwidth=2 noexpandtab
+augroup END
+" }}}
+
 " Coffee specific options {{{
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " }}}
