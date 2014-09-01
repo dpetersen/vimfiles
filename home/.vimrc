@@ -98,6 +98,12 @@ noremap <leader>t :Dispatch<CR>
 " Store swap files in fixed location, not current directory.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
+" Close omnicompletion preview window when you are finished inserting.
+" source:
+" http://stackoverflow.com/questions/3105307/how-do-you-automatically-remove-the-preview-window-after-autocompletion-in-vim
+autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
@@ -186,4 +192,5 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " Javascript specific options {{{
 autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.hbs setl shiftwidth=2 expandtab
 " }}}
