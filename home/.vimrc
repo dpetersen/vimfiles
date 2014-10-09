@@ -194,3 +194,8 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.js setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.hbs setl shiftwidth=2 expandtab
 " }}}
+
+" CSS specific options {{{
+autocmd BufNewFile,BufReadPost *.css setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.scss setl shiftwidth=2 expandtab
+" }}}
