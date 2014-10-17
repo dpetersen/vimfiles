@@ -108,6 +108,7 @@ autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " Remap jk or to be the same as Esc to leave Insert mode.
 inoremap jk <Esc>
+inoremap jj <Esc>
 inoremap <esc> <nop>
 
 " Quick editing and reloading of .vimrc
