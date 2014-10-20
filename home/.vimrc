@@ -92,9 +92,6 @@ augroup END
 " Make Y behave to EOL like most capitolized normal-mode commands.
 noremap Y y$
 
-" Run your tests (probably) with vim-dispatch
-noremap <leader>t :Dispatch<CR>
-
 " Store swap files in fixed location, not current directory.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
@@ -125,11 +122,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " BUG: In iterm, these mappings overwrite each other
 inoremap <CS-J> <Esc>ZZ
 inoremap <C-j> <Esc>:w<Enter>
-
-" Map ,, and ;; to insert/append a single character
-" Found at VimTips Wiki: http://vim.wikia.com/wiki/Insert_a_single_character
-nnoremap ;, i_<esc>r
-nnoremap ;; a_<esc>r
 
 " '<leader>dp/s/v' brings up an :e/sp/vsp prompt in the context of the current file's directory
 noremap <leader>dp :e <C-R>=expand("%:p:h") . "/" <CR>
