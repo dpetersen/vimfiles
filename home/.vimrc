@@ -58,6 +58,10 @@ set wmh=0
 " A split will default to being creating under or to the right of the current.
 set splitbelow splitright
 
+" Always show diffs veritcally regardless of the space available. Horizontal
+" diffs are unreadable to me.
+set diffopt=vertical
+
 " Indent plugin settings for Zenburn
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
