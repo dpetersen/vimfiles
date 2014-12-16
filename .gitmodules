@@ -106,3 +106,6 @@
 [submodule "home/.vim/bundle_storage/tcd.vim"]
 	path = home/.vim/bundle_storage/tcd.vim
 	url = https://github.com/vim-scripts/tcd.vim.git
+[submodule "home/.vim/bundle_storage/rust.vim"]
+	path = home/.vim/bundle_storage/rust.vim
+	url = https://github.com/wting/rust.vim.git

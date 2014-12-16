@@ -1,0 +1,1 @@
+../bundle_storage/rust.vim
