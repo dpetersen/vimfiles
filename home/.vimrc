@@ -110,6 +110,10 @@ autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " http://vim.wikia.com/wiki/Selecting_your_pasted_text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
+" Toggle paste mode on and off.
+" source: http://amix.dk/vim/vimrc.html
+map <leader>pp :setlocal paste!<cr>
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
