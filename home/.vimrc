@@ -192,6 +192,7 @@ augroup golangstyle
   autocmd FileType go noremap <leader>gt :GoTest <CR>
   autocmd FileType go noremap <leader>gT :GoTest <CR>
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
+  autocmd FileType go noremap <leader>gp :GoImports <CR>
 augroup END
 " }}}
 
