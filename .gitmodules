@@ -108,7 +108,7 @@
 	url = https://github.com/vim-scripts/tcd.vim.git
 [submodule "home/.vim/bundle_storage/rust.vim"]
 	path = home/.vim/bundle_storage/rust.vim
-	url = https://github.com/wting/rust.vim.git
+	url = https://github.com/rust-lang/rust.vim.git
 [submodule "home/.vim/bundle_storage/tagbar"]
 	path = home/.vim/bundle_storage/tagbar
 	url = https://github.com/majutsushi/tagbar.git
