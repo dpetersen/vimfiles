@@ -148,6 +148,9 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
+" Toggle TagBar. I don't use it a lot, but it's helpful.
+nnoremap <leader>t :TagbarToggle<CR>
+
 " }}}
 
 " Search Related options {{{
