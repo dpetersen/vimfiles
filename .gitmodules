@@ -112,3 +112,6 @@
 [submodule "home/.vim/bundle_storage/tagbar"]
 	path = home/.vim/bundle_storage/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "home/.vim/bundle_storage/vim-toml"]
+	path = home/.vim/bundle_storage/vim-toml
+	url = https://github.com/cespare/vim-toml.git
