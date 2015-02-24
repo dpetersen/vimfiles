@@ -153,6 +153,13 @@ nnoremap <leader>t :TagbarToggle<CR>
 
 " It's 'm' for make. Even though it's not running make. Deal with it.
 nnoremap <leader>m :Dispatch<CR>
+
+" Close/open quickfix/preview windows from anywhere. Why has it taken me so
+" long to map this?
+nnoremap <leader>qq :cclose<CR>
+nnoremap <leader>qp :pclose<CR>
+nnoremap <leader>qo :copen<CR>
+
 " }}}
 
 " Search Related options {{{
