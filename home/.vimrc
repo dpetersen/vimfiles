@@ -151,6 +151,8 @@ nnoremap <C-h> <C-W>h
 " Toggle TagBar. I don't use it a lot, but it's helpful.
 nnoremap <leader>t :TagbarToggle<CR>
 
+" It's 'm' for make. Even though it's not running make. Deal with it.
+nnoremap <leader>m :Dispatch<CR>
 " }}}
 
 " Search Related options {{{
@@ -197,6 +199,15 @@ augroup golangstyle
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
   autocmd FileType go noremap <leader>gp :GoImports <CR>
 augroup END
+" }}}
+
+" Rust options {{{
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
+
+" I need to do this according to Racer docs.
+" let g:racer_cmd = "~/development/racer/target/release/racer"
+" let $RUST_SRC_PATH="~/development/rust/src"
 " }}}
 
 " Coffee specific options {{{
