@@ -129,11 +129,13 @@ inoremap <esc> <nop>
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" C-j in insert mode escapes normal mode and writes the file.
-" C-S-j in insert mode escapes, saves, and quits.
-" BUG: In iterm, these mappings overwrite each other
-inoremap <CS-J> <Esc>ZZ
+" C-j in insert mode escapes normal mode and writes the file. With shift,
+" write and quit. This requires a terminal setting or it might just freeze
+" your display and nothing else, which is rad. See:
+" http://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
 inoremap <C-j> <Esc>:w<Enter>
+inoremap <C-s> <Esc>:w<Enter>
+nnoremap <C-s> :w<Enter>
 
 " '<leader>dp/s/v' brings up an :e/sp/vsp prompt in the context of the current file's directory
 noremap <leader>dp :e <C-R>=expand("%:p:h") . "/" <CR>
