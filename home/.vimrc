@@ -114,6 +114,10 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " source: http://amix.dk/vim/vimrc.html
 map <leader>pp :setlocal paste!<cr>
 
+" Toggle between Syntastic active/passive modes, which in practice means
+" speeding up Go file saving for projects with a large amount of imports.
+nnoremap <leader>st :SyntasticToggleMode<cr>
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
@@ -206,6 +210,13 @@ augroup golangstyle
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
   autocmd FileType go noremap <leader>gp :GoImports <CR>
 augroup END
+
+" This is a hacky fix for :GoTest breaking when you use testify. It's parsing
+" the errors and expecting things to look very specific, even though testify
+" isn't doing anything that the standard testing library doesn't support. This
+" stops it from opening a nonexistant file because it's incorrectly parsing
+" the error message.
+let g:go_jump_to_error=0
 " }}}
 
 " Rust options {{{
