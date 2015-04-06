@@ -166,6 +166,11 @@ nnoremap <leader>qq :cclose<CR>
 nnoremap <leader>qp :pclose<CR>
 nnoremap <leader>qo :copen<CR>
 
+" C-Enter in insert mode starts a new indented line below. I know this doesn't
+" *look* like Ctrl-Enter, but that seems to be how it's sent in iterm2.
+" Hopefully that carries over to other places I work.
+inoremap <C-M> <Esc>o
+
 " }}}
 
 " Search Related options {{{
