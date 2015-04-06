@@ -224,6 +224,9 @@ augroup END
 " stops it from opening a nonexistant file because it's incorrectly parsing
 " the error message.
 let g:go_jump_to_error=0
+
+" Just autoimport for me, OK?
+let g:go_fmt_command = "goimports"
 " }}}
 
 " Rust options {{{
