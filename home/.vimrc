@@ -73,9 +73,6 @@ augroup indentguidesaugroup
   autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
 augroup END
 
-" Fix for UTF-8 annoyances in vagrant ubuntu
-let g:NERDTreeDirArrows=0
-
 " Have powerline use slightly prettier characters.
 let g:Powerline_symbols = 'unicode'
 
@@ -117,6 +114,25 @@ map <leader>pp :setlocal paste!<cr>
 " Toggle between Syntastic active/passive modes, which in practice means
 " speeding up Go file saving for projects with a large amount of imports.
 nnoremap <leader>st :SyntasticToggleMode<cr>
+
+" Syntastic should open and close location list based on found errors.
+let g:syntastic_auto_loc_list = 1
+
+" Fix for UTF-8 annoyances in vagrant ubuntu
+let g:NERDTreeDirArrows=0
+
+" Let me toggle NERDTree easiy
+nnoremap <leader>nt :NERDTreeToggle<cr>
+
+" Show NERDTree next to startify when you start without selecting a file.
+autocmd VimEnter *
+            \   if !argc()
+            \ |   Startify
+            \ |   NERDTree
+            \ |   wincmd w
+            \ | endif
+" Don't open NERDTree's selection in a split under startify.
+autocmd User Startified setlocal buftype=
 
 " My custom normal/insert mode mappings {{{
 
@@ -213,10 +229,13 @@ augroup golangstyle
   autocmd!
   autocmd FileType go set tabstop=2 shiftwidth=2 noexpandtab
   autocmd FileType go noremap <leader>gt :GoTest <CR>
-  autocmd FileType go noremap <leader>gT :GoTest <CR>
+  autocmd FileType go noremap <leader>gT :GoTestFunc <CR>
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
-  autocmd FileType go noremap <leader>gp :GoImports <CR>
 augroup END
+
+" Use vim-dispatch for appropriate commands. Currently only build, but maybe
+" some day test as well: https://github.com/fatih/vim-go/pull/402
+let g:go_dispatch_enabled = 1
 
 " This is a hacky fix for :GoTest breaking when you use testify. It's parsing
 " the errors and expecting things to look very specific, even though testify
@@ -233,9 +252,8 @@ let g:go_fmt_command = "goimports"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
 
-" I need to do this according to Racer docs.
-" let g:racer_cmd = "~/development/racer/target/release/racer"
-" let $RUST_SRC_PATH="~/development/rust/src"
+" Tell the racer vim plugin the location of the compiled racer binary.
+let g:racer_cmd = "~/.vim/bundle_storage/racer/target/release/racer"
 " }}}
 
 " Coffee specific options {{{
