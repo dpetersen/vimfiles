@@ -115,9 +115,6 @@ map <leader>pp :setlocal paste!<cr>
 " speeding up Go file saving for projects with a large amount of imports.
 nnoremap <leader>st :SyntasticToggleMode<cr>
 
-" Syntastic should open and close location list based on found errors.
-let g:syntastic_auto_loc_list = 1
-
 " Fix for UTF-8 annoyances in vagrant ubuntu
 let g:NERDTreeDirArrows=0
 
