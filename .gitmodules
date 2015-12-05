@@ -123,4 +123,4 @@
 	url = https://github.com/phildawes/racer.git
 [submodule "home/.vim/bundle_storage/vim-go-impl"]
 	path = home/.vim/bundle_storage/vim-go-impl
-	url = git@github.com:rhysd/vim-go-impl.git
+	url = https://github.com/rhysd/vim-go-impl.git
