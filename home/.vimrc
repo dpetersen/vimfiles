@@ -6,7 +6,7 @@ set nocompatible
 set encoding=utf-8
 
 " Ask Pathogen to load bundles
-call pathogen#infect()
+execute pathogen#infect()
 
 let mapleader=","
 let maplocalleader=","
