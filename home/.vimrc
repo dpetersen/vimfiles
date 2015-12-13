@@ -73,9 +73,6 @@ augroup indentguidesaugroup
   autocmd VimEnter,Colorscheme * hi IndentGuidesEven ctermbg=240
 augroup END
 
-" Have powerline use slightly prettier characters.
-let g:Powerline_symbols = 'unicode'
-
 " Show a statusline always.
 set laststatus=2
 
@@ -130,6 +127,10 @@ autocmd VimEnter *
             \ | endif
 " Don't open NERDTree's selection in a split under startify.
 autocmd User Startified setlocal buftype=
+
+" Don't use the special powerline fonts in the tmux theme, since I don't have
+" or wnat that. Well, maybe I want it, but...
+let g:tmuxline_powerline_separators = 0
 
 " My custom normal/insert mode mappings {{{
 
