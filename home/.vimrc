@@ -141,10 +141,10 @@ map <leader>af :Unite -no-split -start-insert file_rec/neovim<CR>
 map <leader>ag :Unite grep:.<CR>
 
 let g:unite_source_grep_command = 'ack-grep'
-let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'        
-let g:unite_source_grep_recursive_opt = ''  
+let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
+let g:unite_source_grep_recursive_opt = ''
 
-autocmd FileType unite call s:unite_my_settings() 
+autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()
         inoremap <silent><buffer><expr> <C-x> unite#do_action('split')
         inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
@@ -255,7 +255,7 @@ if has('nvim')
   function! GoStatusLine()
     return exists('*go#jobcontrol#Statusline') ? go#jobcontrol#Statusline() : ''
   endfunction
-  
+
   function! AirlineInit()
           let g:airline_section_c = get(g:, 'airline_section_c', g:airline_section_c)
           let g:airline_section_c .= g:airline_left_sep . ' %{GoStatusLine()}'
