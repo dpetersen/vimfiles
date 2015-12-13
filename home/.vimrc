@@ -132,6 +132,25 @@ autocmd User Startified setlocal buftype=
 " or wnat that. Well, maybe I want it, but...
 let g:tmuxline_powerline_separators = 0
 
+
+" Unite mappings {{{
+map <leader>ar :UniteResume<CR>
+map <leader>ab :Unite -no-split -start-insert buffer<CR>
+map <leader>ay :Unite -start-insert history/yank<CR>
+map <leader>af :Unite -no-split -start-insert file_rec/neovim<CR>
+map <leader>ag :Unite grep:.<CR>
+
+let g:unite_source_grep_command = 'ack-grep'
+let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'        
+let g:unite_source_grep_recursive_opt = ''  
+
+autocmd FileType unite call s:unite_my_settings() 
+function! s:unite_my_settings()
+        inoremap <silent><buffer><expr> <C-x> unite#do_action('split')
+        inoremap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+endfunction
+" }}}
+
 " My custom normal/insert mode mappings {{{
 
 " Remap jk or to be the same as Esc to leave Insert mode.
@@ -267,3 +286,4 @@ autocmd BufNewFile,BufReadPost *.hbs setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.css setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.scss setl shiftwidth=2 expandtab
 " }}}
+"

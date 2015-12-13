@@ -127,3 +127,12 @@
 [submodule "home/.vim/bundle_storage/tmuxline.vim"]
 	path = home/.vim/bundle_storage/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "home/.vim/bundle_storage/vimproc.vim"]
+	path = home/.vim/bundle_storage/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "home/.vim/bundle_storage/unite.vim"]
+	path = home/.vim/bundle_storage/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "home/.vim/bundle_storage/neoyank.vim"]
+	path = home/.vim/bundle_storage/neoyank.vim
+	url = https://github.com/Shougo/neoyank.vim.git
