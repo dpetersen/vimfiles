@@ -250,6 +250,19 @@ augroup golangstyle
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
 augroup END
 
+
+if has('nvim')
+  function! GoStatusLine()
+    return exists('*go#jobcontrol#Statusline') ? go#jobcontrol#Statusline() : ''
+  endfunction
+  
+  function! AirlineInit()
+          let g:airline_section_c = get(g:, 'airline_section_c', g:airline_section_c)
+          let g:airline_section_c .= g:airline_left_sep . ' %{GoStatusLine()}'
+  endfunction
+  autocmd User AirlineAfterInit call AirlineInit()
+endif
+
 " Use vim-dispatch for appropriate commands. Currently only build, but maybe
 " some day test as well: https://github.com/fatih/vim-go/pull/402
 let g:go_dispatch_enabled = 1
