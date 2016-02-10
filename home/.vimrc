@@ -248,6 +248,11 @@ augroup golangstyle
   autocmd FileType go noremap <leader>gt :GoTest <CR>
   autocmd FileType go noremap <leader>gT :GoTestFunc <CR>
   autocmd FileType go noremap <leader>gi :GoInfo <CR>
+
+	" rails.vim-inspired switch commands, stolen from vim-go docs
+	autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+	autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+	autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 augroup END
 
 
