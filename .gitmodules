@@ -136,3 +136,12 @@
 [submodule "home/.vim/bundle_storage/neoyank.vim"]
 	path = home/.vim/bundle_storage/neoyank.vim
 	url = https://github.com/Shougo/neoyank.vim.git
+[submodule "home/.vim/bundle_storage/typescript-vim"]
+	path = home/.vim/bundle_storage/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "home/.vim/bundle_storage/tsuquyomi"]
+	path = home/.vim/bundle_storage/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "home/.vim/bundle_storage/vim-js-indent"]
+	path = home/.vim/bundle_storage/vim-js-indent
+	url = https://github.com/jason0x43/vim-js-indent.git

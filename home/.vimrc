@@ -136,7 +136,6 @@ autocmd User Startified setlocal buftype=
 " or wnat that. Well, maybe I want it, but...
 let g:tmuxline_powerline_separators = 0
 
-
 " Unite mappings {{{
 map <leader>ar :UniteResume<CR>
 map <leader>ab :Unite -no-split -start-insert buffer<CR>
@@ -245,6 +244,23 @@ augroup END
 
 " }}}
 
+" Typescript specific options {{{
+
+augroup typescriptindentstyle
+  autocmd!
+
+  " don't use indent from the leafgarland/typescript-vim
+  let g:typescript_indent_disable = 1
+
+  " for syntastic, as described in:
+  " https://github.com/Quramy/tsuquyomi#integrate-with-syntastic
+  let g:tsuquyomi_disable_quickfix = 1
+  let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+  autocmd FileType typescript set autoindent shiftwidth=2 softtabstop=2 expandtab
+augroup END
+" }}}
+
 " GoLang options {{{
 augroup golangstyle
   autocmd!
@@ -308,4 +324,3 @@ autocmd BufNewFile,BufReadPost *.hbs setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.css setl shiftwidth=2 expandtab
 autocmd BufNewFile,BufReadPost *.scss setl shiftwidth=2 expandtab
 " }}}
-"
