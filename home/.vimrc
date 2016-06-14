@@ -207,6 +207,19 @@ nnoremap <leader>qo :copen<CR>
 " Hopefully that carries over to other places I work.
 inoremap <C-M> <Esc>o
 
+" Base64 encode/decode. Special detection because, of course, OSX has its own
+" super special base64 that doesn't do stuff like base64 encode things?
+if has("unix")
+  vnoremap <leader>64d c<c-r>=system('base64 --decode', @")<cr><esc>
+
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    vnoremap <leader>64e c<c-r>=system('base64 -w0', @")<cr><esc>
+  else
+    vnoremap <leader>64e c<c-r>=system('openssl base64 -e -A', @")<cr><esc>
+  endif
+endif
+
 " }}}
 
 " Search Related options {{{
