@@ -145,3 +145,6 @@
 [submodule "home/.vim/bundle_storage/vim-js-indent"]
 	path = home/.vim/bundle_storage/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent.git
+[submodule "home/.vim/bundle_storage/vim-airline-themes"]
+	path = home/.vim/bundle_storage/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
