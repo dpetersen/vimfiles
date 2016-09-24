@@ -7,3 +7,4 @@ Sidekiq
 Gemfury
 redis
 sidekiq
+entrypoint
