@@ -136,6 +136,8 @@ autocmd User Startified setlocal buftype=
 " or wnat that. Well, maybe I want it, but...
 let g:tmuxline_powerline_separators = 0
 
+au BufNewFile,BufRead *.dockerfile set filetype=dockerfile
+
 " Unite mappings {{{
 map <leader>ar :UniteResume<CR>
 map <leader>ab :Unite -no-split -start-insert buffer<CR>
