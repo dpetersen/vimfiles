@@ -112,9 +112,15 @@ map <leader>pp :setlocal paste!<cr>
 " speeding up Go file saving for projects with a large amount of imports.
 nnoremap <leader>st :SyntasticToggleMode<cr>
 
+nnoremap <leader>ss let g:syntastic_quiet_messages = { "type": "style" }
+
 " Automatically open the errors list when they are detected. This might be
 " annoying in some languages, but it's gold in go for jumping around.
 let g:syntastic_auto_loc_list=1
+let g:syntastic_always_populate_loc_list=1
+
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 
 " Fix for UTF-8 annoyances in vagrant ubuntu
 let g:NERDTreeDirArrows=0
@@ -316,6 +322,9 @@ let g:go_jump_to_error=0
 
 " Just autoimport for me, OK?
 let g:go_fmt_command = "goimports"
+
+" Do :SyntasticInfo to see all the available checkers
+let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
 " }}}
 
 " Rust options {{{
