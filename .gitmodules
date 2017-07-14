@@ -148,3 +148,6 @@
 [submodule "home/.vim/bundle_storage/vim-airline-themes"]
 	path = home/.vim/bundle_storage/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "home/.vim/bundle_storage/vim-jdaddy"]
+	path = home/.vim/bundle_storage/vim-jdaddy
+	url = git://github.com/tpope/vim-jdaddy.git
