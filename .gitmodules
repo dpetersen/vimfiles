@@ -61,9 +61,6 @@
 [submodule "home/.vim/bundle_storage/vim-bundler"]
 	path = home/.vim/bundle_storage/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
-[submodule "home/.vim/bundle_storage/syntastic"]
-	path = home/.vim/bundle_storage/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "home/.vim/bundle_storage/ctrlp"]
 	path = home/.vim/bundle_storage/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
@@ -151,3 +148,6 @@
 [submodule "home/.vim/bundle_storage/vim-jdaddy"]
 	path = home/.vim/bundle_storage/vim-jdaddy
 	url = git://github.com/tpope/vim-jdaddy.git
+[submodule "home/.vim/bundle_storage/ale"]
+	path = home/.vim/bundle_storage/ale
+	url = https://github.com/w0rp/ale.git
