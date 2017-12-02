@@ -230,6 +230,13 @@ if has("unix")
   else
     vnoremap <leader>64e c<c-r>=system('openssl base64 -e -A', @")<cr><esc>
   endif
+
+  " The pneumonic to remember the mapping is Kubernetes Secret Decode/Encode.
+  " You need to linewise visually select the entire secret block (or as much
+  " of it as you care to decode) first. I use the vim-indent-object to make
+  " this a little faster (vii).
+  vnoremap <leader>ksd :'<,'>normal $vT <leader>64d<cr>
+  vnoremap <leader>kse :'<,'>normal $vT <leader>64e<cr>
 endif
 
 " }}}
