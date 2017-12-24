@@ -108,20 +108,6 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " source: http://amix.dk/vim/vimrc.html
 map <leader>pp :setlocal paste!<cr>
 
-" Toggle between Syntastic active/passive modes, which in practice means
-" speeding up Go file saving for projects with a large amount of imports.
-nnoremap <leader>st :SyntasticToggleMode<cr>
-
-nnoremap <leader>ss let g:syntastic_quiet_messages = { "type": "style" }
-
-" Automatically open the errors list when they are detected. This might be
-" annoying in some languages, but it's gold in go for jumping around.
-let g:syntastic_auto_loc_list=1
-let g:syntastic_always_populate_loc_list=1
-
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-
 " Ale linter options
 let g:ale_linters = {'go': ['gofmt', 'go build']}
 let g:airline#extensions#ale#enabled = 1
@@ -284,11 +270,6 @@ augroup typescriptindentstyle
   " don't use indent from the leafgarland/typescript-vim
   let g:typescript_indent_disable = 1
 
-  " for syntastic, as described in:
-  " https://github.com/Quramy/tsuquyomi#integrate-with-syntastic
-  let g:tsuquyomi_disable_quickfix = 1
-  let g:syntastic_typescript_checkers = ['tsuquyomi']
-
   autocmd FileType typescript set autoindent shiftwidth=2 softtabstop=2 expandtab
 augroup END
 " }}}
@@ -334,8 +315,6 @@ let g:go_jump_to_error=0
 " Just autoimport for me, OK?
 let g:go_fmt_command = "goimports"
 
-" Do :SyntasticInfo to see all the available checkers
-let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
 " }}}
 
 " Rust options {{{
