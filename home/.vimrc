@@ -321,8 +321,8 @@ let g:go_fmt_command = "goimports"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
 
-" Tell the racer vim plugin the location of the compiled racer binary.
-let g:racer_cmd = "~/.vim/bundle_storage/racer/target/release/racer"
+" part of rust-lang/rust.vim
+let g:rustfmt_autosave = 1
 " }}}
 
 " Coffee specific options {{{
