@@ -154,3 +154,6 @@
 [submodule "home/.vim/bundle_storage/vim-markdown"]
 	path = home/.vim/bundle_storage/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "home/.vim/bundle_storage/vim-terraform"]
+	path = home/.vim/bundle_storage/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
