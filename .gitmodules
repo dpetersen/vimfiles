@@ -112,9 +112,6 @@
 [submodule "home/.vim/bundle_storage/vim-dispatch"]
 	path = home/.vim/bundle_storage/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule "home/.vim/bundle_storage/racer"]
-	path = home/.vim/bundle_storage/racer
-	url = https://github.com/phildawes/racer.git
 [submodule "home/.vim/bundle_storage/vim-go-impl"]
 	path = home/.vim/bundle_storage/vim-go-impl
 	url = https://github.com/rhysd/vim-go-impl.git
