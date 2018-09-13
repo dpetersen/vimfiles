@@ -324,6 +324,12 @@ let g:go_fmt_command = "goimports"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
 
+" Show the complete function definition (e.g. its arguments and return type)
+let g:racer_experimental_completer = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap K <Plug>(rust-doc)
+
 " part of rust-lang/rust.vim
 let g:rustfmt_autosave = 1
 " }}}
