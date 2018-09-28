@@ -129,7 +129,7 @@ autocmd VimEnter *
 autocmd User Startified setlocal buftype=
 
 " Don't use the special powerline fonts in the tmux theme, since I don't have
-" or wnat that. Well, maybe I want it, but...
+" or want that. Well, maybe I want it, but...
 let g:tmuxline_powerline_separators = 0
 
 au BufNewFile,BufRead *.dockerfile set filetype=dockerfile
@@ -291,7 +291,6 @@ augroup golangstyle
 	autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 augroup END
 
-
 if has('nvim')
   function! GoStatusLine()
     return exists('*go#jobcontrol#Statusline') ? go#jobcontrol#Statusline() : ''
@@ -321,23 +320,27 @@ let g:go_fmt_command = "goimports"
 " }}}
 
 " Rust options {{{
-autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
-autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
+augroup rustlangstyle
+  autocmd!
+  autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+  autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
+  
+  autocmd FileType rust setlocal runtimepath+=~/.vim/bundle_storage/LanguageClient-neovim
+  autocmd FileType rust setlocal omnifunc=LanguageClient#complete
+  
+  " As stolen from the LanguageClient plugin's README. These are applicable to
+  " more than Rust, but lets see them actually work for a minute before we get
+  " too crazy:
+  " https://github.com/autozimu/LanguageClient-neovim
+  autocmd FileType rust nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+  autocmd FileType rust nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  autocmd FileType rust nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  autocmd FileType rust nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+augroup END
 
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
-set runtimepath+=~/.vim-plugins/LanguageClient-neovim
-
-" As stolen from the LanguageClient plugin's README. These are applicable to
-" more than Rust, but lets see them actually work for a minute before we get
-" too crazy:
-" https://github.com/autozimu/LanguageClient-neovim
-au FileType rust nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-au FileType rust nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-au FileType rust nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-au FileType rust nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
 
 " part of rust-lang/rust.vim
 let g:rustfmt_autosave = 1
