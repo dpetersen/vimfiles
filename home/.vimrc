@@ -324,11 +324,20 @@ let g:go_fmt_command = "goimports"
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
 
-" Show the complete function definition (e.g. its arguments and return type)
-let g:racer_experimental_completer = 1
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ }
+set runtimepath+=~/.vim-plugins/LanguageClient-neovim
 
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap K <Plug>(rust-doc)
+" As stolen from the LanguageClient plugin's README. These are applicable to
+" more than Rust, but lets see them actually work for a minute before we get
+" too crazy:
+" https://github.com/autozimu/LanguageClient-neovim
+au FileType rust nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+au FileType rust nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+au FileType rust nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+au FileType rust nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 
 " part of rust-lang/rust.vim
 let g:rustfmt_autosave = 1

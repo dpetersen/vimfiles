@@ -157,3 +157,6 @@
 [submodule "home/.vim/bundle_storage/vim-racer"]
 	path = home/.vim/bundle_storage/vim-racer
 	url = https://github.com/racer-rust/vim-racer
+[submodule "home/.vim/bundle_storage/LanguageClient-neovim"]
+	path = home/.vim/bundle_storage/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim.git
