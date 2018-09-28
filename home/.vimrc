@@ -5,8 +5,63 @@ set nocompatible
 " things up.
 set encoding=utf-8
 
-" Ask Pathogen to load bundles
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'spiiph/vim-space'
+Plug 'mileszs/ack.vim'
+Plug 'vim-scripts/camelcasemotion'
+Plug 'tpope/vim-endwise'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-bundler'
+Plug 'kien/ctrlp.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-obsession'
+Plug 'noprompt/vim-yardoc'
+Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-startify'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'vim-scripts/tcd.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-dispatch'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neoyank.vim'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-rails'
+Plug 'plasticboy/vim-markdown', { 'for': [ 'md', 'markdown' ] }
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'pangloss/vim-javascript', { 'for': 'js' }
+Plug 'rust-lang/rust.vim', { 'for': 'rs' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'rhysd/vim-go-impl', { 'for': 'go' }
+Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
+Plug 'Quramy/tsuquyomi', { 'for': 'ts' }
+Plug 'jason0x43/vim-js-indent', { 'for': 'js' }
+Plug 'tpope/vim-jdaddy', { 'for': 'json' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+call plug#end()
 
 let mapleader=","
 let maplocalleader=","
@@ -325,7 +380,6 @@ augroup rustlangstyle
   autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
   autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs let b:dispatch = 'cargo run'
   
-  autocmd FileType rust setlocal runtimepath+=~/.vim/bundle_storage/LanguageClient-neovim
   autocmd FileType rust setlocal omnifunc=LanguageClient#complete
   
   " As stolen from the LanguageClient plugin's README. These are applicable to
