@@ -36,7 +36,6 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-dispatch'
 Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
-Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/neoyank.vim'
 Plug 'vim-airline/vim-airline-themes'
@@ -56,6 +55,7 @@ Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
 Plug 'Quramy/tsuquyomi', { 'for': 'ts' }
 Plug 'jason0x43/vim-js-indent', { 'for': 'js' }
 Plug 'tpope/vim-jdaddy', { 'for': 'json' }
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
