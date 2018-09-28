@@ -154,9 +154,6 @@
 [submodule "home/.vim/bundle_storage/vim-terraform"]
 	path = home/.vim/bundle_storage/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
-[submodule "home/.vim/bundle_storage/vim-racer"]
-	path = home/.vim/bundle_storage/vim-racer
-	url = https://github.com/racer-rust/vim-racer
 [submodule "home/.vim/bundle_storage/LanguageClient-neovim"]
 	path = home/.vim/bundle_storage/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim.git
